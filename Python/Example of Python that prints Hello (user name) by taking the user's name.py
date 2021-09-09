@@ -1,0 +1,2 @@
+input('isminizi girin:')
+print('')
