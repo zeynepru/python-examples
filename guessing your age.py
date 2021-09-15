@@ -1,10 +1,15 @@
 import datetime
+now = datetime.datetime.now()
+now = int(now.year)
+def yas (t):
+    if (t <= 0) :
+     z = "0 veya negatif sayı girilemez"
+    elif (t >= now) :
 
-ad = input("Adınızı Girin: ")
-dogum_yili = int(input("Doğum Yılınızı Girin :"))
+     z = "bu yıl girilemez"
 
-guncel_tarih = datetime.datetime.now()
-guncel_yil = guncel_tarih.year
-yas = guncel_yil - dogum_yili
+    elif (t < now) :
+      z=now - t
+      return z
+print(yas(t = int(input("doğum tarihinizi giriniz :"))))
 
-print("Merhaba {}, yaşınız {}'dır".format(ad, yas))
